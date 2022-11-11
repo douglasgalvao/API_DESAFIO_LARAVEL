@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3306/api'
+  apiUrl: 'http://localhost:8000/api',
+  session: {
+    token: 'token',
+    user: 'user'
+  }
 };
 
 /*
