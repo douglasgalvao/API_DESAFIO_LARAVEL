@@ -16,10 +16,10 @@ class CreateNeighborhoodController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $neighborhood = new Neighborhood();
-        $neighborhood->name = $request->name;
-        $neighborhood->city_id = $request->city_id;
-        $neighborhood->save();
-        return $neighborhood;
+        $request->validate([
+            'name' => 'required|string|min:2|max:255',
+            'city_id' => 'required|exists:cities'
+        ]);
+        return Neighborhood::create($request->all());
     }
 }
