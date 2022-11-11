@@ -1,8 +1,7 @@
-
 <div class="container">
 
-
   <div class="loginContent">
+
     <div class="loginTitle">
       <h2>DesafioPHP</h2>
     </div>
@@ -20,11 +19,6 @@
       </div>
 
       <button type="submit" [disabled]="formLogin.invalid">Login</button>
-      <div *ngIf="logged==false">
-        <span class="loader"></span>
-      </div>
-      <span *ngIf="logged==true"><i class="fa-solid fa-check"></i></span>
-      <a routerLink="/register">Don't you have any account yet? Register right here</a>
     </form>
     <!-- {{formLogin.value | json}} -->
 
