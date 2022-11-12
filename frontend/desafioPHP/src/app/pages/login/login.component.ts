@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -26,11 +26,11 @@ export class LoginComponent implements OnInit {
 
 
   onSubmit() {
-    this.authService.doLogin(this.formLogin.value).subscribe(e => {
+    this.authService.doLogin(this.formLogin.value).subscribe((e: any) => {
       this.authService.updateToken(e.token);
       this.authService.updateUser(e.user);
       this.router.navigate(["/crud"]);
-    }, (error => {
+    }, ((error: any) => {
       console.log(error);
     }))
   }

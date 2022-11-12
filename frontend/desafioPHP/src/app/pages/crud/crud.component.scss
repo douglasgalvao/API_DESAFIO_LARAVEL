@@ -1,0 +1,62 @@
+.crudContent {
+  max-width: 100%;
+  max-height: 100%;
+  .neighborContent {
+    margin: 10px;
+    padding: 10px;
+    border: 0.1em solid white;
+    border-radius: 5px;
+    form {
+      .ctInput {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        label {
+          color: #ffff;
+        }
+        input {
+          padding: 5px;
+          border-radius: 5px;
+          border: 0.1em solid transparent;
+          &:focus {
+            transition: 0.5s;
+            border-color: #ffff;
+            background-color: #ffffff88;
+          }
+        }
+      }
+    }
+  }
+  .cityContent {
+    margin: 10px;
+    padding: 10px;
+    border: 0.1em solid white;
+    border-radius: 5px;
+    form {
+      .ctInput {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        label {
+          color: #ffff;
+        }
+        input {
+          padding: 5px;
+          border-radius: 5px;
+          border: 0.1em solid transparent;
+          &:focus {
+            transition: 0.5s;
+            border-color: #ffff;
+            background-color: #ffffff88;
+          }
+        }
+      }
+    }
+  }
+  .crudTitle {
+    h2 {
+      font-size: x-large;
+      color: #ffff;
+    }
+  }
+}

@@ -1,1 +1,49 @@
-<p>crud works!</p>
+<div class="crudContent">
+  <div class="cityContent">
+    <div class="crudTitle">
+      <h2>Cadastro de Cidade</h2>
+    </div>
+
+    <form [formGroup]="formCity" (submit)="onSubmitCity()">
+
+      <div class="ctInput">
+        <label for="city">city name:</label>
+        <input type="text" id="city" formControlName="city">
+      </div>
+
+      <div class="ctInput">
+        <label for="state">state:</label>
+        <input type="text" id="state" formControlName="state">
+      </div>
+
+      <div class="ctInput">
+        <label for="fundation_date">fundation_date:</label>
+        <input type="date" id="fundation_date" formControlName="fundation_date">
+      </div>
+
+      <button type="submit" [disabled]="formCity.invalid">Save</button>
+    </form>
+  </div>
+
+  <div class="neighborContent">
+    <div class="crudTitle">
+      <h2>Cadastro de Bairro</h2>
+    </div>
+
+    <form [formGroup]="formNeighbor" (submit)="onSubmitNeighbor()">
+
+      <div class="ctInput">
+        <label for="login">Login:</label>
+        <input type="text" id="login" formControlName="email">
+      </div>
+
+      <div class="ctInput">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password">
+      </div>
+
+      <button type="submit" [disabled]="formNeighbor.invalid">Save</button>
+    </form>
+    <!-- {{formLogin.value | json}} -->
+  </div>
+</div>

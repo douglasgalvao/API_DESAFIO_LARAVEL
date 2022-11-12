@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 import { LocalStorageService } from 'angular-web-storage';
 import { Observable } from 'rxjs/internal/Observable';
 import { environment } from 'src/environments/environment';
-import { LoginModel } from './models/login.model';
-import { UserModel } from './models/user.model';
+import { LoginModel } from '../models/login.model';
+import { UserModel } from '../models/user.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -42,5 +43,7 @@ export class AuthService {
   get user() {
     return this.storageService.get(environment.session.user) as UserModel;
   }
+
+
 
 }
