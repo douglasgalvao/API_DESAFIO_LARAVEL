@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-crud',
@@ -14,7 +14,21 @@ export class CrudComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmitCity(){}
-  onSubmitNeighbor(){}
+  onSubmitCity() { }
+  onSubmitNeighbor() { }
+
+  initForm() {
+    this.formCity = this.formBuilder.group({
+      city: ['', [Validators.required]],
+      state: ['', [Validators.required]],
+      fundation_date: ['', [Validators.required]]
+    })
+
+    this.formNeighbor = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      city_id: ['', [Validators.required]]
+    })
+
+  }
 
 }
